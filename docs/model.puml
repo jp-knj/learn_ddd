@@ -1,0 +1,62 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+title モデル
+header created by jp-knj
+rectangle 参加者集約 {
+  entity Member {
+    id
+    ---
+    name
+    email
+status
+  }
+  note right of Member
+  ・ status の区分は 「在籍中、休会中、退会」
+  ・ status が在籍中である場合、いずれかのペアに所属している。
+  ・ name は数字でかつ、3文字以内である必要がある
+  end note
+}
+
+rectangle ペア集約 {
+    entity Pair {
+    id
+    ---
+    name
+  }
+  note right of Pair
+  ・ 同じ Pair に所属している Member は2人以上3人以下である必要がある
+
+  end note
+}
+rectangle チーム集約 {
+  entity Team {
+    id
+    ---
+    name
+  }
+  note right of Team
+  ・1チームは参加者が3人必要である
+  ・ name は数字でかつ、3文字以内である必要がある
+  end note
+}
+
+rectangle 課題集約 {
+  entity Task {
+    id
+    ---
+    title
+    status
+    member_id
+  }
+  note right of Task
+  ・ status の区分は 「未着手、レビュー待ち、完了」
+  ・ member_id の場合、status を更新できる
+  ・ status が完了の場合、更新できない
+  end note
+}
+
+Member -- Pair
+Pair -- Team
+Member -- Task
+@enduml

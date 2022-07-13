@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/ja/use-case-diagram
+
+title ユースケース
+header created by jp-knj
+
+left to right direction
+actor "参加者" as Actor
+rectangle Authentication {
+  usecase "Login" as AuthenticationUC1
+  usecase "Sign up" as AuthenticationUC2
+}
+
+rectangle Task {
+  usecase "show all tasks" as TaskUC1
+  usecase "change status of a task" as TaskUC2
+}
+
+rectangle Member  {
+  usecase "Change your own status" as MemberUC1
+}
+
+Actor --> AuthenticationUC1
+Actor --> AuthenticationUC2
+
+Actor --> TaskUC1
+Actor --> TaskUC2
+
+Actor --> MemberUC1
+
+@enduml

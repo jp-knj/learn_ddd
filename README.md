@@ -7,6 +7,9 @@
 #### client
 - React
 
+#### Other
+- yarn workspace
+- prettier
 ## Task
 [Domain](https://airtable.com/appPxhCPFYGqqN9YU/tblVlFr2q4lIqDKYc/viwX8r6DpCRp80swL/recZs7kxeZqeZlph6?blocks=hide)
 ## Model

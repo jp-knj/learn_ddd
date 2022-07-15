@@ -11,6 +11,7 @@
     "client"
   ],
   "scripts": {
+    "client": "yarn workspace client start",
     "server": "yarn workspace server start",
     "format:fix": "yarn format:server -- --write --cache && yarn format:client -- --write --cache ",
     "format": "yarn format:server && yarn format:client",

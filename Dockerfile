@@ -11,5 +11,3 @@ RUN yarn
 
 # use nest command
 RUN yarn global add @nestjs/cli
-
-CMD ["yarn", "run", "server"]

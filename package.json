@@ -17,8 +17,12 @@
     "format": "yarn format:server && yarn format:client",
     "format:server": "prettier --check --ignore-path server/.gitignore server/**/*.{js,ts}",
     "format:client": "prettier --check --ignore-path client/.gitignore client/**/*.{ts,tsx,css}"
-},
+  },
   "devDependencies": {
+    "eslint": "8.19.0",
     "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "typescript": "4.7.4"
   }
 }

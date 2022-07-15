@@ -6,8 +6,14 @@
   "author": "jp-knj <kenji.tomita1996@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": ["server", "client"],
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
     "server": "yarn workspace server start"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   }
 }

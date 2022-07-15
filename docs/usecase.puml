@@ -12,31 +12,32 @@ rectangle Authentication {
 
   Actor --> AuthenticationUC1
   Actor --> AuthenticationUC2
+  AuthenticationUC2 --> AuthenticationUC1
 }
 
 rectangle Task {
   usecase "show all tasks" as TaskUC1
   usecase "change status of a task" as TaskUC2
 
-  Actor --> TaskUC1
-  Actor --> TaskUC2
+  AuthenticationUC1 --> TaskUC1
+  AuthenticationUC1 --> TaskUC2
 }
 
 rectangle Member  {
   usecase "change your own status" as MemberUC1
 
-  Actor --> MemberUC1
+  AuthenticationUC1 --> MemberUC1
 }
 
 rectangle Pair {
   usecase "move to another pair" as PairUC1
 
-  Actor --> PairUC1
+  AuthenticationUC1 --> PairUC1
 }
 
 rectangle Team {
   usecase "move to another team" as TeamUC1
 
-  Actor --> TeamUC1
+  AuthenticationUC1 --> TeamUC1
 }
 @enduml

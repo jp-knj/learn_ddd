@@ -1,0 +1,10 @@
+{
+  "name": "learn-ddd",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github-private:jp-knj/learn_ddd.git",
+  "author": "jp-knj <kenji.tomita1996@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["server", "client"]
+}

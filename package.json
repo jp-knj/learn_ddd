@@ -11,8 +11,12 @@
     "client"
   ],
   "scripts": {
-    "server": "yarn workspace server start"
-  },
+    "server": "yarn workspace server start",
+    "format:fix": "yarn format:server -- --write --cache && yarn format:client -- --write --cache ",
+    "format": "yarn format:server && yarn format:client",
+    "format:server": "prettier --check --ignore-path server/.gitignore server/**/*.{js,ts}",
+    "format:client": "prettier --check --ignore-path client/.gitignore client/**/*.{ts,tsx,css}"
+},
   "devDependencies": {
     "prettier": "2.7.1"
   }
